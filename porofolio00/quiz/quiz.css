@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+}
+
+li.selected {
+    color: orange;
+    font-weight: bold;
+}
+
+ol {
+    list-style-type: lower-alpha;
+}
+
+li {
+    cursor: pointer;
+}

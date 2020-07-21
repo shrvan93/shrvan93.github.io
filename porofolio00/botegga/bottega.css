@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    font-size: 1.2em;
+
+}
+
+.welcome, .portofolio {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+.welcome {
+    z-index: 1;
+    background-color: black;
+    background-image: url('img/1.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    transition-duration: 1.5s;
+    transition-property: left;
+}
+.portofolio .pictures img{
+    width: 200px;
+    height: 300px;
+
+}
+.portofolio {
+    z-index: 0;
+    background-color: rgb(205, 92, 92);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.pictures {
+    width: 80%;
+    text-align: center;
+}
+
+.title {
+    margin-top: 1em;
+    font-family: libre baskerville, sans-serif;
+    font-size: 5em;
+    color: white;
+}
+.enter, .back {
+    font-family: sans-serif;
+    color: white;
+    font-size: 2em;
+    /*text-align: center;*/
+    margin: 0.8em;
+    position: relative;
+    cursor: pointer;
+
+}
+.enter::after, .back::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    background-color: white;
+    opacity: 0;
+    width: 0;
+    transition-duration: 0.5s;
+}
+.enter:hover::after, .back:hover::after {
+    width: 100%;
+    opacity: 1;
+
+}
+
+@keyframes bounce {
+    from {
+        top: 0px;
+        color: white;
+    }
+    to {
+        top: -0.7em;
+        color: black;
+    }
+}
+.title span {
+    position: relative;
+}
+.title span.bounce {
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+.slide-out {
+    left: 100vw;
+
+}
+
+.slide-in {
+    left: 0;
+
+}
+
+
+
+
+/*main {*/
+/*    height: 100vh;*/
+/*    width: 100vw;*/
+/*    background-color: black;*/
+/*    background-image: url("1.jpg");*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.title {*/
+/*    font-family: libre baskerville, sans-serif;*/
+/*    font-size: 5em;*/
+/*    font-weight: 700;*/
+/*    color: white;*/
+/*}*/
+/*.enter {*/
+/*    font-family: sans-serif;*/
+/*    color: white;*/
+/*    font-size: 2em;*/
+/*    text-align: center;*/
+/*    margin-top: 1em;*/
+
+/*}*/
