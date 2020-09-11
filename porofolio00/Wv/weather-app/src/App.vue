@@ -7,7 +7,7 @@
       type="text" 
       placeholder="City Name" 
       class="search-bar" 
-      v-model="requete"
+      v-model="request"
       @keypress="fetchTheWeather"
     /></div> 
   </div>
@@ -41,27 +41,27 @@ export default {
     fetchTheWeather(i){
       if (i.key == "Enter")
       {
-        fetch(`${this.url_base}weather?q=${this.requete}&units=metric&APPID=${this.api_key}`)
+        fetch(`${this.url_base}weather?q=${this.request}&units=metric&APPID=${this.api_key}`)
         .then(response => {
           return response.json();
-        }).then(this.SetResultat);
+        }).then(this.SetResult);
       }
     },
-    SetResultat(res){
+    SetResult(res){
       this.weather = res;
     },
     ladate() {
       let i = new Date();
-      let lesmois = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-      let jourSemaine = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      let m = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      let d = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     
-      let jour = jourSemaine[i.getDay()];
+      let day = d[i.getDay()];
       let date = i.getDate();
-      let mois = lesmois[i.getMonth()];
-      let annee = i.getFullYear();
+      let month = m[i.getMonth()];
+      let year = i.getFullYear();
 
       //date in string
-      return `${jour} ${date} ${mois} ${annee}`;
+      return `${day} ${date} ${month} ${year}`;
     }
   }
 }
