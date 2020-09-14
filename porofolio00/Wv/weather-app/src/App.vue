@@ -14,7 +14,7 @@
   <div class="weter" v-if="typeof weather.main != 'undefined'">
     <section class="location">
       <div class="city">{{  weather.name  }}, {{  weather.sys.country  }}</div>
-      <div class="date">{{ ladate() }}</div>
+      <div class="date">{{ thedate() }}</div>
     </section>
     <div class="weather-wrap">
       <div class="temperature">{{  Math.round(weather.main.temp).toFixed(0)  }}<span>°c</span></div>
@@ -33,7 +33,7 @@ export default {
     return {
       api_key: '486c4f64c4a03c69e3d934323ede1cba',
       url_base: 'https://api.openweathermap.org/data/2.5/',
-      requete: '',
+     request: '',
       weather: {}
     }
   },
@@ -50,7 +50,7 @@ export default {
     SetResult(res){
       this.weather = res;
     },
-    ladate() {
+    thedate() {
       let i = new Date();
       let m = ["January","February","March","April","May","June","July","August","September","October","November","December"];
       let d = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
