@@ -5,13 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.svg">
+    <link rel="stylesheet" href="style.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <div class="container">
+      <div class="btn">
+          <input type="button" value="Restaurant" onclick="window.location.href='https://shrvan93.github.io/porofolio00/RestaurantAD/restaurant.html'"  class="a1">
+          <br>
+          <input type="button" value="Tipalculator" onclick="window.location.href='https://shrvan93.github.io/porofolio00/myTipalculator/index.html'"  class="a2">
+          <br>
+          <input type="button" value="TodoListVue" onclick="window.location.href='https://shrvan93.github.io/porofolio00/todo/todo.html'"  class="a3">
+          <br>
+          <input type="button" value="NormalCalc" onclick="window.location.href='https://shrvan93.github.io/porofolio00/NormalCalculator/index.html'" class="a4">
+          <br>
+          <input type="button" value="BottegaRicci" onclick="window.location.href='https://shrvan93.github.io/porofolio00/botegga/bottega.html'" class="a5">
+          <br>
+      </div>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    
   </body>
 </html>
