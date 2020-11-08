@@ -1,5 +1,5 @@
 {
-  "name": "weatherVue",
+  "name": "vue-weather-app",
   "version": "1.0.0",
   "private": true,
   "description": "Weather app using Vue.js, OpenWeatherMap.",
