@@ -1,6 +1,6 @@
 
 
-# vue-weather-app
+# weather-app
 Weather app using Vue.js, OpenWeatherMap. 
 
 ## Project setup
